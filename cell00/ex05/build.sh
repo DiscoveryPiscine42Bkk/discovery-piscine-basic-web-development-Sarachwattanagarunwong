@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello World</title>
-  </head>
-  <body>
-    Hello World
-  </body>
-</html>
+#1/bin/bash
+if [ $# -eq 0 ]; then
+  echo "No arguments supplied"
+  exit 1
+fi 
+
+for arg in "$@"
+do
+  mkdir "ex$arg"
+done
